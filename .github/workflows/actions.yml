@@ -22,6 +22,4 @@ jobs:
         uses: xavidop/alexa-ask-aws-cli-docker@v1.0.6
         id: ask
         with:
-          command: "ask --version"
-      - name: Get the output
-        run: echo "The result was ${{ steps.ask.outputs.result }}"
+          command: "ask deploy"
