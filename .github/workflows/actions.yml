@@ -1,0 +1,13 @@
+name: Fearless Alexa Skill CI/CD
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - run: |
+          cd lambda;
+          npm install;
+          npm run test;

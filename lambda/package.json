@@ -1,10 +1,10 @@
 {
-    "name": "hello-world",
+    "name": "fearless-alexa-skill",
     "version": "1.1.0",
     "description": "alexa utility for quickly building skills",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "npx mocha"
     },
     "author": "Amazon Alexa",
     "license": "ISC",
