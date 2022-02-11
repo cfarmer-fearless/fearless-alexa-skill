@@ -1,0 +1,30 @@
+{
+  "askcliStatesVersion": "2020-03-31",
+  "profiles": {
+    "default": {
+      "skillId": "amzn1.ask.skill.15f836ac-ea3b-4584-90a2-64fbcaaa156f",
+      "skillMetadata": {
+        "lastDeployHash": "reBPb8C4dFXdmAikFKNSdHh63ec="
+      },
+      "code": {
+        "default": {
+          "lastDeployHash": "TfHklZuD7Ygx6V2AERbhE9ZjOvk="
+        }
+      },
+      "skillInfrastructure": {
+        "@ask-cli/lambda-deployer": {
+          "deployState": {
+            "default": {
+              "lambda": {
+                "arn": "arn:aws:lambda:us-east-1:373878623860:function:ask-fearless-baltimore-default-default-1644543030007",
+                "lastModified": "2022-02-11T02:58:28.000+0000",
+                "revisionId": "0b438430-0af6-4570-9d12-bf6c26ce10a3"
+              },
+              "iamRole": "arn:aws:iam::373878623860:role/ask-lambda-fearless-baltimore-1644543029596"
+            }
+          }
+        }
+      }
+    }
+  }
+}

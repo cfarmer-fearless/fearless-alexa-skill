@@ -1,0 +1,65 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "fearless baltimore",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "EmployeeCountIntent",
+                    "slots": [],
+                    "samples": [
+                        "employee count",
+                        "how many employees work there"
+                    ]
+                },
+                {
+                    "name": "PetCountIntent",
+                    "slots": [
+                        {
+                            "name": "animal",
+                            "type": "LIST_OF_PET_TYPES"
+                        }
+                    ],
+                    "samples": [
+                        "{animal} pet count"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "LIST_OF_PET_TYPES",
+                    "values": [
+                        {
+                            "id": "DOG",
+                            "name": {
+                                "value": "dog"
+                            }
+                        },
+                        {
+                            "id": "CAT",
+                            "name": {
+                                "value": "cat"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+  }
+  
