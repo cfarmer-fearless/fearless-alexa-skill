@@ -22,7 +22,7 @@ jobs:
           sudo npm install -g ask-cli@2;
           cd lambda;
           npm install;
-      - run: ask deploy
+      - run: ask deploy --ignore-hash
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
