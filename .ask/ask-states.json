@@ -4,7 +4,8 @@
     "default": {
       "skillId": "amzn1.ask.skill.15f836ac-ea3b-4584-90a2-64fbcaaa156f",
       "skillMetadata": {
-        "lastDeployHash": "reBPb8C4dFXdmAikFKNSdHh63ec="
+        "lastDeployHash": "p5LwtCu6wfX+Cjxj4V/Pv7k7NBA=",
+        "eTag": "ba023c026696e0f06c435af29a7ed6cd"
       },
       "code": {
         "default": {
