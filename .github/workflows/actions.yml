@@ -16,9 +16,8 @@ jobs:
     needs: test
     if: ${{ true }}
     steps:
-      - name: Checkout
+      - name: Checkout and deploy to dev
         uses: actions/checkout@v2
-      - name: Deploy to Dev
       - run: |
           sudo npm install -g ask-cli;
           cd lambda;
