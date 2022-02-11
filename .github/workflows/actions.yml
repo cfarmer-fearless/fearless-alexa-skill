@@ -19,7 +19,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Deploy to Dev
-        uses: xavidop/alexa-ask-aws-cli-docker@v1.0.6
-        id: ask
-        with:
-          command: "ask deploy"
+      - run: |
+          sudo npm install -g ask-cli;
+          cd lambda;
+          npm install;
+      - run: ask deploy
