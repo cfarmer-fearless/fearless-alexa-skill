@@ -20,4 +20,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Deploy to Dev
         uses: xavidop/alexa-ask-aws-cli-docker@v1.0.6
-      - run: ask deploy
+        with:
+          command: "ask --version"
