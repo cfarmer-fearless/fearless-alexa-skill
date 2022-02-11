@@ -16,7 +16,7 @@ describe("Fearless Solutions Skill", () => {
     alexaTest.test([
       {
         request: new test.LaunchRequestBuilder(skillSettings).build(),
-        says: "Welcome to Fearless!  Where we make software with a soul.  Do you want to hear more about it?",
+        says: "Welcome to Fearless!  Where we make software with a soul.  Do you want to hear more about ?",
         reprompts:
           "Welcome to Fearless!  Where we make software with a soul.  Do you want to hear more about it?",
         shouldEndSession: false,
