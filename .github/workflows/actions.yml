@@ -16,14 +16,11 @@ jobs:
     needs: test
     if: ${{ true }}
     steps:
-      - name: Checkout and deploy to dev
+      - name: Checkout
         uses: actions/checkout@v2
-      - run: |
-          sudo npm install -g aws-cli
-          sudo npm install -g ask-cli@2;
-          cd lambda;
-          npm install;
-      - run: ask deploy
+      - name: Deploy to dev
+        uses: xavidop/alexa-ask-aws-cli-docker@v1.0.6
+        run: ask deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
