@@ -26,6 +26,32 @@
           }
         }
       }
+    },
+    "__ENVIRONMENT_ASK_PROFILE__": {
+      "skillId": "amzn1.ask.skill.15f836ac-ea3b-4584-90a2-64fbcaaa156f",
+      "skillMetadata": {
+        "lastDeployHash": "reBPb8C4dFXdmAikFKNSdHh63ec=",
+        "eTag": "ba023c026696e0f06c435af29a7ed6cd"
+      },
+      "code": {
+        "default": {
+          "lastDeployHash": "X1N47uv8Cr2JS//8Yy3+amvBjHA="
+        }
+      },
+      "skillInfrastructure": {
+        "@ask-cli/lambda-deployer": {
+          "deployState": {
+            "default": {
+              "lambda": {
+                "arn": "arn:aws:lambda:us-east-1:373878623860:function:ask-fearless-baltimore-default-default-1644543030007",
+                "lastModified": "2022-02-14T14:10:50.000+0000",
+                "revisionId": "aa710660-af6c-4f3e-a230-13efee3bd571"
+              },
+              "iamRole": "arn:aws:iam::373878623860:role/ask-lambda-fearless-baltimore-1644543029596"
+            }
+          }
+        }
+      }
     }
   }
 }
