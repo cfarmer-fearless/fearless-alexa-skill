@@ -55,6 +55,9 @@ const PetCountIntentHandler = {
       case "cat":
         petCount = 36;
         break;
+      case "bird":
+        petCount = 10;
+        break;
     }
 
     if (petCount === undefined) {

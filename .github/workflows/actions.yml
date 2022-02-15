@@ -19,6 +19,7 @@ jobs:
       - name: Checkout and deploy to dev
         uses: actions/checkout@v2
       - run: |
+          sudo npm install -g aws-cli
           sudo npm install -g ask-cli@2;
           cd lambda;
           npm install;
