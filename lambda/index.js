@@ -37,8 +37,18 @@ const PetCountIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const pet = handlerInput.requestEnvelope.request.intent.slots.animal.value;
+    const pet =
+      handlerInput.requestEnvelope.request.intent.slots?.animal?.value;
     let speakOutput;
+
+    if (pet === undefined) {
+      speakOutput = Strings.responses.petCountIntent.UNSPECIFIED_PET;
+      return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .reprompt(speakOutput)
+        .getResponse();
+    }
+
     let petCount = undefined;
 
     switch (pet) {

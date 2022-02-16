@@ -45,4 +45,17 @@ describe("Fearless Solutions Skill", () => {
       },
     ]);
   });
+
+  describe("PetCountIntent should return unprovided pet response", () => {
+    alexaTest.test([
+      {
+        request: new test.IntentRequestBuilder(
+          skillSettings,
+          "PetCountIntent"
+        ).build(),
+        says: "Sorry, I did not understand the pet you requested.  What is the type of pet?",
+        shouldEndSession: false,
+      },
+    ]);
+  });
 });
