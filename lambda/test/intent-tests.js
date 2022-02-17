@@ -53,7 +53,7 @@ describe("Fearless Solutions Skill", () => {
           skillSettings,
           "PetCountIntent"
         ).build(),
-        says: "Sorry, I did not understand the pet you requested.  What is the type of pet?",
+        reprompts: "What kind of pet?",
         shouldEndSession: false,
       },
     ]);

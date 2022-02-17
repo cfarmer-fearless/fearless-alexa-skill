@@ -1,7 +1,5 @@
-// This sample demonstrates handling intents from an Alexa skill using the Alexa Skills Kit SDK (v2).
-// Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
-// session persistence, api calls, and more.
 const Alexa = require("ask-sdk-core");
+const Strings = require("./languageStrings").EN;
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
@@ -10,8 +8,7 @@ const LaunchRequestHandler = {
     );
   },
   handle(handlerInput) {
-    const speakOutput =
-      "Welcome to Fearless!  Where we make software with a soul.  Do you want to hear more about it?";
+    const speakOutput = Strings.responses.launchRequest.WELCOME;
     return handlerInput.responseBuilder
       .speak(speakOutput)
       .reprompt(speakOutput)
@@ -27,13 +24,9 @@ const EmployeeCountIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const speakOutput = "Fearless currently has 192 team members.";
-    return (
-      handlerInput.responseBuilder
-        .speak(speakOutput)
-        //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-        .getResponse()
-    );
+    const count = 192;
+    const speakOutput = Strings.responses.employeeCountIntent.COUNT(count);
+    return handlerInput.responseBuilder.speak(speakOutput).getResponse();
   },
 };
 const PetCountIntentHandler = {
@@ -44,8 +37,18 @@ const PetCountIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const pet = handlerInput.requestEnvelope.request.intent.slots.animal.value;
+    const pet =
+      handlerInput.requestEnvelope.request.intent.slots?.animal?.value;
     let speakOutput;
+
+    if (pet === undefined) {
+      speakOutput = Strings.responses.petCountIntent.UNSPECIFIED_PET_REPROMPT;
+      return handlerInput.responseBuilder
+        .speak(speakOutput)
+        .reprompt(speakOutput)
+        .getResponse();
+    }
+
     let petCount = undefined;
 
     switch (pet) {
@@ -55,12 +58,15 @@ const PetCountIntentHandler = {
       case "cat":
         petCount = 36;
         break;
+      case "bird":
+        petCount = 10;
+        break;
     }
 
     if (petCount === undefined) {
-      speakOutput = `I am not sure how many ${pet} owners are at Fearless Baltimore.`;
+      speakOutput = Strings.responses.petCountIntent.UNKNOWN_PET(pet);
     } else {
-      speakOutput = `There are ${petCount} ${pet} owners at Fearless Baltimore`;
+      speakOutput = Strings.responses.petCountIntent.COUNT(petCount, pet);
     }
 
     return handlerInput.responseBuilder.speak(speakOutput).getResponse();

@@ -42,7 +42,7 @@ const PetCountIntentHandler = {
     let speakOutput;
 
     if (pet === undefined) {
-      speakOutput = Strings.responses.petCountIntent.UNSPECIFIED_PET;
+      speakOutput = Strings.responses.petCountIntent.UNSPECIFIED_PET_REPROMPT;
       return handlerInput.responseBuilder
         .speak(speakOutput)
         .reprompt(speakOutput)

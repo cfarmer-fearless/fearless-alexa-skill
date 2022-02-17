@@ -36,7 +36,8 @@
                         }
                     ],
                     "samples": [
-                        "{animal} pet count"
+                        "number of pet owners",
+                        "number of {animal} pet owners"
                     ]
                 }
             ],
