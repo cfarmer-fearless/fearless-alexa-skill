@@ -9,7 +9,7 @@
       },
       "code": {
         "default": {
-          "lastDeployHash": "ARg1PIwqeWnsJEAnCVpRHuLxNcg="
+          "lastDeployHash": "B+WToHR+g3Tn8emvY6e3wPGVojM="
         }
       },
       "skillInfrastructure": {
@@ -18,8 +18,8 @@
             "default": {
               "lambda": {
                 "arn": "arn:aws:lambda:us-east-1:373878623860:function:ask-fearless-baltimore-default-default-1644543030007",
-                "lastModified": "2022-02-17T16:34:40.000+0000",
-                "revisionId": "e1da7973-673b-441f-ba07-54de2fe76969"
+                "lastModified": "2022-02-17T16:48:45.000+0000",
+                "revisionId": "efe9f84c-2077-4a27-9a7a-75ff6bebc71a"
               },
               "iamRole": "arn:aws:iam::373878623860:role/ask-lambda-fearless-baltimore-1644543029596"
             }

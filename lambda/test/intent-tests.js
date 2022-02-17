@@ -58,4 +58,33 @@ describe("Fearless Solutions Skill", () => {
       },
     ]);
   });
+
+  describe("PetCountIntent should return specific pet count after asking for kind of pet", () => {
+    const animal = "bird";
+    const regexPetCountResponse =
+      /[<speak>]There are \d{2} bird owners at Fearless Baltimore[.</speak>]/;
+
+    alexaTest.test([
+      {
+        request: new test.IntentRequestBuilder(
+          skillSettings,
+          "PetCountIntent"
+        ).build(),
+        reprompts: "What kind of pet?",
+        shouldEndSession: false,
+      },
+      {
+        request: new test.IntentRequestBuilder(skillSettings, "PetCountIntent")
+          .withSlot("animal", animal)
+          .build(),
+        shouldEndSession: true,
+        callback: (response) => {
+          const match = regexPetCountResponse.test(
+            response.response.outputSpeech.ssml
+          );
+          assert.isTrue(match);
+        },
+      },
+    ]);
+  });
 });

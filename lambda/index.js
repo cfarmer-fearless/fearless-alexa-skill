@@ -69,7 +69,10 @@ const PetCountIntentHandler = {
       speakOutput = Strings.responses.petCountIntent.COUNT(petCount, pet);
     }
 
-    return handlerInput.responseBuilder.speak(speakOutput).getResponse();
+    return handlerInput.responseBuilder
+      .speak(speakOutput)
+      .withShouldEndSession(true)
+      .getResponse();
   },
 };
 const HelpIntentHandler = {

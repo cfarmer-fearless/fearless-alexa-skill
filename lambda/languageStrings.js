@@ -9,7 +9,7 @@ const EN = {
     },
     petCountIntent: {
       COUNT: (petCount, pet) =>
-        `There are ${petCount} ${pet} owners at Fearless Baltimore`,
+        `There are ${petCount} ${pet} owners at Fearless Baltimore.`,
       UNKNOWN_PET: (pet) =>
         `I am not sure how many ${pet} owners are at Fearless Baltimore.`,
       UNSPECIFIED_PET_REPROMPT: "What kind of pet?",
