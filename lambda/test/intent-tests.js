@@ -1,7 +1,7 @@
 const assert = require("chai").assert;
 
 const test = require("ask-sdk-test");
-const skillHandler = require("../index").handler;
+const skillHandler = require("../build/index").handler;
 
 // initialize the testing framework
 const skillSettings = {
