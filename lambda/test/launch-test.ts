@@ -1,5 +1,7 @@
 import { AlexaTest, LaunchRequestBuilder, SkillSettings } from 'ask-sdk-test';
 import { handler as skillHandler } from '../index';
+import i18next from "i18next";
+import { STRING_KEYS } from '../utils/constants';
 
 const skillSettings: SkillSettings = {
   appId: 'amzn1.ask.skill.00000000-0000-0000-0000-000000000000',
@@ -12,8 +14,7 @@ const alexaTest = new AlexaTest(skillHandler, skillSettings);
 
 describe('LaunchRequest', () => {
   describe('should show welcome message', () => {
-    const responsePhrase =
-    "Welcome to Fearless!  Where we make software with a soul.  Do you want to hear more about it?";
+    const responsePhrase = i18next.t(STRING_KEYS.WELCOME);
     alexaTest.test([
       {
         request: new LaunchRequestBuilder(skillSettings).build(),

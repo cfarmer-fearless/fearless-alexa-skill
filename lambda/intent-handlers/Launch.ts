@@ -12,6 +12,6 @@ export const Launch: RequestHandler = {
     return handlerInput.responseBuilder
       .speak(speakOutput)
       .reprompt(speakOutput)
-      .getResponse()
+      .getResponse();
   }
 }
