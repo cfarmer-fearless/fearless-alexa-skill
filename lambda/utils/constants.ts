@@ -11,7 +11,8 @@ export enum IntentTypes {
   Stop = 'AMAZON.StopIntent',
   // Custom
   EmployeeCount = 'EmployeeCountIntent',
-  PetCount = 'PetCountIntent'
+  PetCount = 'PetCountIntent',
+  Principals = 'PrincipalsIntent'
 }
 
 export enum STRING_KEYS {
@@ -19,7 +20,8 @@ export enum STRING_KEYS {
   EMPLOYEE_COUNT = 'EMPLOYEE_COUNT',
   PET_COUNT = 'PET_COUNT',
   PET_COUNT_UNKNOWN_PET = 'PET_COUNT_UNKNOWN_PET',
-  PET_COUNT_UNKNOWN_PET_REPROMPT = 'PET_COUNT_UNKNOWN_PET_REPROMPT'
+  PET_COUNT_UNKNOWN_PET_REPROMPT = 'PET_COUNT_UNKNOWN_PET_REPROMPT',
+  PRINCIPALS_INTRO = 'PRINCIPALS_INTRO'
 };
 
 export enum LocaleTypes {

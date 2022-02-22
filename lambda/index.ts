@@ -5,6 +5,7 @@ import { HelpIntent } from './intent-handlers/HelpIntent';
 import { IntentReflectionHandler } from './intent-handlers/IntentReflextion';
 import { Launch } from "./intent-handlers/Launch";
 import { PetCountIntent } from './intent-handlers/PetCountIntent';
+import { PrincipalsIntent } from './intent-handlers/PrincipalsIntent';
 import { SessionEndRequestHandler } from './intent-handlers/SessionEnd';
 import { LocalizationRequestInterceptor } from './interceptors/LocalizationRequestInterceptor';
 
@@ -31,6 +32,7 @@ export const handler = Alexa.SkillBuilders.custom()
     Launch, 
     EmployeeCountIntent, 
     PetCountIntent,
+    PrincipalsIntent,
     HelpIntent,
     CancelIntent,
     SessionEndRequestHandler,

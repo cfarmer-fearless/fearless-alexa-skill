@@ -6,6 +6,7 @@ interface Strings {
   PET_COUNT: string;
   PET_COUNT_UNKNOWN_PET: string;
   PET_COUNT_UNKNOWN_PET_REPROMPT: string;
+  PRINCIPALS_INTRO: string;
 }
 
 export const strings = {
@@ -15,7 +16,8 @@ export const strings = {
       EMPLOYEE_COUNT: 'Fearless currently has {{count}} team members.',
       PET_COUNT: 'There are {{count}} {{pet}} owners at Fearless Baltimore.',
       PET_COUNT_UNKNOWN_PET: 'I am not sure how many {{pet}} owners are at Fearless Baltimore.',
-      PET_COUNT_UNKNOWN_PET_REPROMPT: 'What kind of pet?'
+      PET_COUNT_UNKNOWN_PET_REPROMPT: 'What kind of pet?',
+      PRINCIPALS_INTRO: 'At the foundation of Fearless culture are four principals.  First, create belonging.  Second, make an impact.  Third, encourage open dialog.  And fourth, take initiative.  Say first, second, third, or fourth to hear more about them.'
     } as Strings
   }
 }
