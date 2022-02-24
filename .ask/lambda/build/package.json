@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "npx mocha --require node_modules/ts-node/register/index.js test/*.ts",
-        "build": "cp package.json build && cd build/ && npm install"
+        "clean": "rm -rf build",
+        "compile": "tsc --build tsconfig.json --pretty",
+        "build": "npm run clean && npm run compile && cp package.json build && cd build/ && npm install"
     },
     "author": "Amazon Alexa",
     "license": "ISC",

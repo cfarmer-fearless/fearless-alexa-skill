@@ -4,12 +4,12 @@
     "default": {
       "skillId": "amzn1.ask.skill.15f836ac-ea3b-4584-90a2-64fbcaaa156f",
       "skillMetadata": {
-        "lastDeployHash": "aFENFc5DebfsGofmK3MM8K2GM3g=",
+        "lastDeployHash": "nMSxUtSjQQd4wwl/wA2ObwCkYGc=",
         "eTag": "ba023c026696e0f06c435af29a7ed6cd"
       },
       "code": {
         "default": {
-          "lastDeployHash": "X5fFf6qicbma1h+D5MqqR9kgJrE="
+          "lastDeployHash": "NHviAt4tMCSElLhYlcGJJKlUKtI="
         }
       },
       "skillInfrastructure": {
@@ -18,8 +18,8 @@
             "default": {
               "lambda": {
                 "arn": "arn:aws:lambda:us-east-1:373878623860:function:ask-fearless-baltimore-default-default-1644543030007",
-                "lastModified": "2022-02-17T18:39:42.000+0000",
-                "revisionId": "601c1776-00e8-4a59-8b17-d4fcd085e160"
+                "lastModified": "2022-02-24T10:22:59.000+0000",
+                "revisionId": "ddb3f4d1-cfaf-4270-b10b-a7675f7a4afa"
               },
               "iamRole": "arn:aws:iam::373878623860:role/ask-lambda-fearless-baltimore-1644543029596"
             }

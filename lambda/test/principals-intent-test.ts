@@ -17,7 +17,24 @@ describe('PrincipalsIntent', () => {
     alexaTest.test([
       {
         request: new IntentRequestBuilder(skillSettings, IntentTypes.Principals).build(),
-        says: i18next.t(STRING_KEYS.PRINCIPALS_INTRO)
+        says: i18next.t(STRING_KEYS.PRINCIPALS_INTRO),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_INTRO),
+        shouldEndSession: false
+      }
+    ])
+  });
+
+  describe('should say first principal and reprompt to say second principal', () => {
+    alexaTest.test([
+      {
+        request: new IntentRequestBuilder(
+        skillSettings, 
+        IntentTypes.Principals)
+          .withSlot("number", "1st")
+          .build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_FIRST),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPORMPT),
+        shouldEndSession: false
       }
     ])
   });

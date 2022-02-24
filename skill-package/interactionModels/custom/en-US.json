@@ -45,15 +45,16 @@
                     "name": "PrincipalsIntent",
                     "slots": [
                         {
-                            "name": "animal",
+                            "name": "number",
                             "type": "PRINCIPAL_NUMBER"
                         }
                     ],
                     "samples": [
+                        "{number}",
+                        "{number} principal",
                         "principals",
-                        "fearless principals",
-                        "tell me about fearless principals",
-                        "{number} principal"
+                        "guiding principals",
+                        "tell me about guiding principals"
                     ]
                 }
             ],
