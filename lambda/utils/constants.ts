@@ -9,6 +9,8 @@ export enum IntentTypes {
   Help = 'AMAZON.HelpIntent',
   Cancel = 'AMAZON.CancelIntent',
   Stop = 'AMAZON.StopIntent',
+  Yes = 'AMAZON.YesIntent',
+  No = 'AMAZON.NoIntent',
   // Custom
   EmployeeCount = 'EmployeeCountIntent',
   PetCount = 'PetCountIntent',

@@ -38,4 +38,27 @@ describe('PrincipalsIntent', () => {
       }
     ])
   });
+
+  describe('should say first principal after yes response to intro', () => {
+    alexaTest.test([
+      {
+        request: new IntentRequestBuilder(
+          skillSettings,
+          IntentTypes.Principals
+        ).build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_INTRO),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_INTRO),
+        shouldEndSession: false
+      },
+      {
+        request: new IntentRequestBuilder(
+          skillSettings,
+          IntentTypes.Yes
+        ).build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_FIRST),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPORMPT),
+        shouldEndSession: false
+      }
+    ]);
+  });
 });

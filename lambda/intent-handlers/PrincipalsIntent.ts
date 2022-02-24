@@ -1,19 +1,30 @@
 import { getIntentName, getSlotValue, HandlerInput, RequestHandler } from "ask-sdk-core";
-import { IntentRequest } from "ask-sdk-model";
+import { Response } from "ask-sdk-model";
 import i18next from "i18next";
 import { IntentTypes, STRING_KEYS } from "../utils/constants";
 import { isIntent } from "../utils/helpers";
 
 export const PrincipalsIntent: RequestHandler = {
   canHandle(handlerInput: HandlerInput) {
-    console.log(getIntentName(handlerInput.requestEnvelope))
-    return isIntent(handlerInput, IntentTypes.Principals);
+    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes()
+    const handlingYesIntent = 
+      isIntent(handlerInput, IntentTypes.Yes)
+      && sessionAttributes.lastPrincipal != undefined;
+    
+    return isIntent(handlerInput, IntentTypes.Principals) || handlingYesIntent;
   },
   handle(handlerInput: HandlerInput) {
-    console.log('handling principal')
     const principalNumber = getSlotValue(handlerInput.requestEnvelope, 'number');
+    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+
+    if (isIntent(handlerInput, IntentTypes.Yes)) {
+      return sayFirstPrincipal(handlerInput, sessionAttributes);
+    }
 
     if (principalNumber === null || principalNumber === undefined) {
+      sessionAttributes.lastPrincipal = 'intro';
+      handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+
       return handlerInput.responseBuilder
         .speak(i18next.t(STRING_KEYS.PRINCIPALS_INTRO))
         .reprompt(i18next.t(STRING_KEYS.PRINCIPALS_INTRO))
@@ -22,13 +33,18 @@ export const PrincipalsIntent: RequestHandler = {
 
     switch (principalNumber) {
       case '1st':
-        return handlerInput.responseBuilder
-          .speak(i18next.t(STRING_KEYS.PRINCIPALS_FIRST))
-          .reprompt(i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPORMPT))
-          .getResponse();
-    
+        return sayFirstPrincipal(handlerInput, sessionAttributes);
       default:
         break;
     }
   }
+}
+
+const sayFirstPrincipal = (handlerInput: HandlerInput, sessionAttributes: any): Response => {
+  sessionAttributes.lastPrincipal = '1st';
+  handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+  return handlerInput.responseBuilder
+    .speak(i18next.t(STRING_KEYS.PRINCIPALS_FIRST))
+    .reprompt(i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPORMPT))
+    .getResponse();
 }
