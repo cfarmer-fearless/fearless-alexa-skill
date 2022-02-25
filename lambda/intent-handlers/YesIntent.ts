@@ -2,7 +2,7 @@ import { HandlerInput, RequestHandler } from "ask-sdk-core";
 import i18next from "i18next";
 import { IntentTypes, STRING_KEYS } from "../utils/constants";
 import { isIntent } from "../utils/helpers";
-import { sayFirstPrincipal } from "./PrincipalsIntent";
+import { sayPrincipal } from "./PrincipalsIntent";
 
 export const YesIntent: RequestHandler = {
   canHandle(handlerInput: HandlerInput) {
@@ -20,9 +20,12 @@ export const YesIntent: RequestHandler = {
         .getResponse()
     }
 
+    // TODO: Handle principal reprompts?
     switch (question) {
       case i18next.t(STRING_KEYS.PRINCIPALS_INTRO):
-        return sayFirstPrincipal(handlerInput, sessionAttributes);    
+        return sayPrincipal('1st', handlerInput, sessionAttributes); 
+      case i18next.t(STRING_KEYS.PRINCIPALS_FIRST): 
+        return sayPrincipal('2nd', handlerInput, sessionAttributes);   
       default:
         break;
     }

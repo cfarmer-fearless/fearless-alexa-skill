@@ -33,7 +33,7 @@ describe('PrincipalsIntent', () => {
           .withSlot("number", "1st")
           .build(),
         says: i18next.t(STRING_KEYS.PRINCIPALS_FIRST),
-        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPORMPT),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPROMPT),
         shouldEndSession: false
       }
     ])
@@ -56,7 +56,30 @@ describe('PrincipalsIntent', () => {
           IntentTypes.Yes
         ).build(),
         says: i18next.t(STRING_KEYS.PRINCIPALS_FIRST),
-        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPORMPT),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPROMPT),
+        shouldEndSession: false
+      }
+    ]);
+  });
+
+  describe('should say second principal after yes response to first principal', () => {
+    alexaTest.test([
+      {
+        request: new IntentRequestBuilder(
+          skillSettings,
+          IntentTypes.Principals
+        ).withSlot('number', '1st').build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_FIRST),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPROMPT),
+        shouldEndSession: false
+      },
+      {
+        request: new IntentRequestBuilder(
+          skillSettings,
+          IntentTypes.Yes
+        ).build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_SECOND),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_SECOND_REPROMPT),
         shouldEndSession: false
       }
     ]);
