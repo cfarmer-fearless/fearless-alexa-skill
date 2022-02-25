@@ -64,9 +64,11 @@
                     "samples": [
                         "{number}",
                         "{number} principal",
+                        "culture",
                         "principals",
                         "guiding principals",
-                        "tell me about guiding principals"
+                        "tell me about guiding principals",
+                        "tell me about the culture"
                     ]
                 }
             ],
