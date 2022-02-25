@@ -7,6 +7,7 @@ import { Launch } from "./intent-handlers/Launch";
 import { PetCountIntent } from './intent-handlers/PetCountIntent';
 import { PrincipalsIntent } from './intent-handlers/PrincipalsIntent';
 import { SessionEndRequestHandler } from './intent-handlers/SessionEnd';
+import { YesIntent } from './intent-handlers/YesIntent';
 import { LocalizationRequestInterceptor } from './interceptors/LocalizationRequestInterceptor';
 
 // Generic error handling to capture any syntax or routing errors. If you receive an error
@@ -35,6 +36,7 @@ export const handler = Alexa.SkillBuilders.custom()
     PrincipalsIntent,
     HelpIntent,
     CancelIntent,
+    YesIntent,
     SessionEndRequestHandler,
     IntentReflectionHandler // make sure IntentReflectorHandler is last so it doesn't override your custom intent handlers.
   )

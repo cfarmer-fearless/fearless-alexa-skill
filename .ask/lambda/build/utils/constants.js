@@ -14,6 +14,8 @@ var IntentTypes;
     IntentTypes["Help"] = "AMAZON.HelpIntent";
     IntentTypes["Cancel"] = "AMAZON.CancelIntent";
     IntentTypes["Stop"] = "AMAZON.StopIntent";
+    IntentTypes["Yes"] = "AMAZON.YesIntent";
+    IntentTypes["No"] = "AMAZON.NoIntent";
     // Custom
     IntentTypes["EmployeeCount"] = "EmployeeCountIntent";
     IntentTypes["PetCount"] = "PetCountIntent";
@@ -29,6 +31,7 @@ var STRING_KEYS;
     STRING_KEYS["PRINCIPALS_INTRO"] = "PRINCIPALS_INTRO";
     STRING_KEYS["PRINCIPALS_FIRST"] = "PRINCIPALS_FIRST";
     STRING_KEYS["PRINCIPALS_FIRST_REPORMPT"] = "PRINCIPALS_FIRST_REPROMPT";
+    STRING_KEYS["UNKNOWN_QUESTION"] = "UNKNOWN_QUESTION";
 })(STRING_KEYS = exports.STRING_KEYS || (exports.STRING_KEYS = {}));
 ;
 var LocaleTypes;

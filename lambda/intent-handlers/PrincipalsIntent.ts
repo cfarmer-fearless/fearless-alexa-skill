@@ -6,23 +6,14 @@ import { isIntent } from "../utils/helpers";
 
 export const PrincipalsIntent: RequestHandler = {
   canHandle(handlerInput: HandlerInput) {
-    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes()
-    const handlingYesIntent = 
-      isIntent(handlerInput, IntentTypes.Yes)
-      && sessionAttributes.lastPrincipal != undefined;
-    
-    return isIntent(handlerInput, IntentTypes.Principals) || handlingYesIntent;
+    return isIntent(handlerInput, IntentTypes.Principals);
   },
   handle(handlerInput: HandlerInput) {
     const principalNumber = getSlotValue(handlerInput.requestEnvelope, 'number');
     const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
 
-    if (isIntent(handlerInput, IntentTypes.Yes)) {
-      return sayFirstPrincipal(handlerInput, sessionAttributes);
-    }
-
     if (principalNumber === null || principalNumber === undefined) {
-      sessionAttributes.lastPrincipal = 'intro';
+      sessionAttributes.question = i18next.t(STRING_KEYS.PRINCIPALS_INTRO);
       handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
 
       return handlerInput.responseBuilder
@@ -40,9 +31,10 @@ export const PrincipalsIntent: RequestHandler = {
   }
 }
 
-const sayFirstPrincipal = (handlerInput: HandlerInput, sessionAttributes: any): Response => {
-  sessionAttributes.lastPrincipal = '1st';
+export const sayFirstPrincipal = (handlerInput: HandlerInput, sessionAttributes: any): Response => {
+  sessionAttributes.question = i18next.t(STRING_KEYS.PRINCIPALS_FIRST);
   handlerInput.attributesManager.setSessionAttributes(sessionAttributes);
+  
   return handlerInput.responseBuilder
     .speak(i18next.t(STRING_KEYS.PRINCIPALS_FIRST))
     .reprompt(i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPORMPT))

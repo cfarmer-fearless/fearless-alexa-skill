@@ -9,6 +9,7 @@ interface Strings {
   PRINCIPALS_INTRO: string;
   PRINCIPALS_FIRST: string;
   PRINCIPALS_FIRST_REPROMPT: string;
+  UNKNOWN_QUESTION: string;
 }
 
 export const strings = {
@@ -21,7 +22,8 @@ export const strings = {
       PET_COUNT_UNKNOWN_PET_REPROMPT: 'What kind of pet?',
       PRINCIPALS_INTRO: 'At the foundation of Fearless culture are four principals.  First, create belonging.  Second, make an impact.  Third, encourage open dialog.  And fourth, take initiative.  Say first, second, third, or fourth to hear more about them.  Would you like to hear the first principal?',
       PRINCIPALS_FIRST: 'The first principal is to create belonging.  There are many different groups and communities at Fearless.  We encourage our team members to find ones they like, or make their own.  Would you like to hear the second principal?',
-      PRINCIPALS_FIRST_REPROMPT: 'Would you like to hear the second principal?'
+      PRINCIPALS_FIRST_REPROMPT: 'Would you like to hear the second principal?',
+      UNKNOWN_QUESTION: 'Sorry, I am not sure what you are referring to'
     } as Strings
   }
 }
