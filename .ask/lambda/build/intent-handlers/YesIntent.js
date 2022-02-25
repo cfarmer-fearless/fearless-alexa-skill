@@ -24,7 +24,13 @@ exports.YesIntent = {
         }
         switch (question) {
             case i18next_1.default.t(constants_1.STRING_KEYS.PRINCIPALS_INTRO):
-                return (0, PrincipalsIntent_1.sayFirstPrincipal)(handlerInput, sessionAttributes);
+                return (0, PrincipalsIntent_1.sayPrincipal)('1st', handlerInput, sessionAttributes);
+            case i18next_1.default.t(constants_1.STRING_KEYS.PRINCIPALS_FIRST):
+                return (0, PrincipalsIntent_1.sayPrincipal)('2nd', handlerInput, sessionAttributes);
+            case i18next_1.default.t(constants_1.STRING_KEYS.PRINCIPALS_SECOND):
+                return (0, PrincipalsIntent_1.sayPrincipal)('3rd', handlerInput, sessionAttributes);
+            case i18next_1.default.t(constants_1.STRING_KEYS.PRINCIPALS_THIRD):
+                return (0, PrincipalsIntent_1.sayPrincipal)('4th', handlerInput, sessionAttributes);
             default:
                 break;
         }
