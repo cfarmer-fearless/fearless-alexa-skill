@@ -20,12 +20,15 @@ export const YesIntent: RequestHandler = {
         .getResponse()
     }
 
-    // TODO: Handle principal reprompts?
     switch (question) {
       case i18next.t(STRING_KEYS.PRINCIPALS_INTRO):
         return sayPrincipal('1st', handlerInput, sessionAttributes); 
       case i18next.t(STRING_KEYS.PRINCIPALS_FIRST): 
-        return sayPrincipal('2nd', handlerInput, sessionAttributes);   
+        return sayPrincipal('2nd', handlerInput, sessionAttributes);
+      case i18next.t(STRING_KEYS.PRINCIPALS_SECOND):
+        return sayPrincipal('3rd', handlerInput, sessionAttributes);
+      case i18next.t(STRING_KEYS.PRINCIPALS_THIRD):
+        return sayPrincipal('4th', handlerInput, sessionAttributes);
       default:
         break;
     }

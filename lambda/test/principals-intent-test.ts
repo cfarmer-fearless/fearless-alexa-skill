@@ -84,4 +84,48 @@ describe('PrincipalsIntent', () => {
       }
     ]);
   });
+
+  describe('should say third principal after yes response to second principal', () => {
+    alexaTest.test([
+      {
+        request: new IntentRequestBuilder(
+          skillSettings,
+          IntentTypes.Principals
+        ).withSlot('number', '2nd').build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_FIRST),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPROMPT),
+        shouldEndSession: false
+      },
+      {
+        request: new IntentRequestBuilder(
+          skillSettings,
+          IntentTypes.Yes
+        ).build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_THIRD),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_THIRD_REPROMPT),
+        shouldEndSession: false
+      }
+    ]);
+  });
+
+  describe('should say fourth principal after yes response to third principal', () => {
+    alexaTest.test([
+      {
+        request: new IntentRequestBuilder(
+          skillSettings,
+          IntentTypes.Principals
+        ).withSlot('number', '3rd').build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_FIRST),
+        reprompts: i18next.t(STRING_KEYS.PRINCIPALS_FIRST_REPROMPT),
+        shouldEndSession: false
+      },
+      {
+        request: new IntentRequestBuilder(
+          skillSettings,
+          IntentTypes.Yes
+        ).build(),
+        says: i18next.t(STRING_KEYS.PRINCIPALS_FOURTH)
+      }
+    ]);
+  });
 });
