@@ -20,6 +20,7 @@ interface Strings {
   UNKNOWN_QUESTION: string;
   HELP: string;
   HELP_REPROMPT: string;
+  CANCEL: string;
 }
 
 export const strings = {
@@ -48,6 +49,7 @@ export const strings = {
       UNKNOWN_QUESTION: "Sorry, I am not sure what you are referring to",
       HELP: `Let me help you learn more about Fearless.  ${helpMessageBody}`,
       HELP_REPROMPT: helpMessageBody,
+      CANCEL: "Goodbye!",
     } as Strings,
   },
   [LocaleTypes.esES]: {
@@ -76,6 +78,7 @@ export const strings = {
       UNKNOWN_QUESTION: "Sorry, I am not sure what you are referring to",
       HELP: `Let me help you learn more about Fearless.  ${helpMessageBody}`,
       HELP_REPROMPT: helpMessageBody,
+      CANCEL: "Adios!",
     } as Strings,
   },
 };

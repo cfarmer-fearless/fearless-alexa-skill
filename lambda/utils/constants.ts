@@ -34,6 +34,7 @@ export enum STRING_KEYS {
   UNKNOWN_QUESTION = "UNKNOWN_QUESTION",
   HELP = "HELP",
   HELP_REPROMPT = "HELP_REPROMPT",
+  CANCEL = "CANCEL",
 }
 
 export enum LocaleTypes {

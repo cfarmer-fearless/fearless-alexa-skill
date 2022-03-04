@@ -38,6 +38,7 @@ var STRING_KEYS;
     STRING_KEYS["UNKNOWN_QUESTION"] = "UNKNOWN_QUESTION";
     STRING_KEYS["HELP"] = "HELP";
     STRING_KEYS["HELP_REPROMPT"] = "HELP_REPROMPT";
+    STRING_KEYS["CANCEL"] = "CANCEL";
 })(STRING_KEYS = exports.STRING_KEYS || (exports.STRING_KEYS = {}));
 var LocaleTypes;
 (function (LocaleTypes) {

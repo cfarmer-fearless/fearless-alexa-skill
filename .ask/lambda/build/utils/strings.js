@@ -22,6 +22,7 @@ exports.strings = {
             UNKNOWN_QUESTION: "Sorry, I am not sure what you are referring to",
             HELP: `Let me help you learn more about Fearless.  ${helpMessageBody}`,
             HELP_REPROMPT: helpMessageBody,
+            CANCEL: "Goodbye!",
         },
     },
     [constants_1.LocaleTypes.esES]: {
@@ -42,6 +43,7 @@ exports.strings = {
             UNKNOWN_QUESTION: "Sorry, I am not sure what you are referring to",
             HELP: `Let me help you learn more about Fearless.  ${helpMessageBody}`,
             HELP_REPROMPT: helpMessageBody,
+            CANCEL: "Adios!",
         },
     },
 };
