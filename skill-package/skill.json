@@ -11,6 +11,15 @@
           ],
           "name": "fearless-baltimore",
           "description": "Sample Full Description"
+        },
+        "es-ES": {
+          "summary": "Sample Short Description",
+          "examplePhrases": [
+            "Alexa abre fearless",
+            "hola"
+          ],
+          "name": "fearless-baltimore",
+          "description": "Sample Full Description"
         }
       },
       "isAvailableWorldwide": true,

@@ -1,0 +1,133 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "fearless",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": [
+                    "ayuda"
+                  ]
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.YesIntent",
+                  "samples": [
+                      "si"
+                  ]
+              },
+              {
+                  "name": "AMAZON.NoIntent",
+                  "samples": [
+                      "no"
+                  ]
+              },
+              {
+                  "name": "EmployeeCountIntent",
+                  "slots": [],
+                  "samples": [
+                      "número de empleados",
+                      "Cuantos empleados trabajan allí"
+                  ]
+              },
+              {
+                  "name": "PetCountIntent",
+                  "slots": [
+                      {
+                          "name": "animal",
+                          "type": "LIST_OF_PET_TYPES"
+                      }
+                  ],
+                  "samples": [
+                      "{animal}",
+                      "number of pet owners",
+                      "number of {animal} pet owners"
+                  ]
+              },
+              {
+                  "name": "PrincipalsIntent",
+                  "slots": [
+                      {
+                          "name": "number",
+                          "type": "PRINCIPAL_NUMBER"
+                      }
+                  ],
+                  "samples": [
+                      "{number}",
+                      "{number} principal",
+                      "culture",
+                      "principals",
+                      "guiding principals",
+                      "tell me about guiding principals",
+                      "tell me about the culture"
+                  ]
+              }
+          ],
+          "types": [
+              {
+                  "name": "LIST_OF_PET_TYPES",
+                  "values": [
+                      {
+                          "id": "DOG",
+                          "name": {
+                              "value": "dog"
+                          }
+                      },
+                      {
+                          "id": "CAT",
+                          "name": {
+                              "value": "cat"
+                          }
+                      },
+                      {
+                          "id": "BIRD",
+                          "name": {
+                              "value": "bird"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "PRINCIPAL_NUMBER",
+                  "values": [
+                      {
+                          "id": "FIRST",
+                          "name": {
+                              "value": "first"
+                          }
+                      },
+                      {
+                          "id": "SECOND",
+                          "name": {
+                              "value": "second"
+                          }
+                      },
+                      {
+                          "id": "THIRD",
+                          "name": {
+                              "value": "third"
+                          }
+                      },
+                      {
+                          "id": "FOURTH",
+                          "name": {
+                              "value": "fourth"
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  }
+}

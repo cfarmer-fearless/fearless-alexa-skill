@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.strings = void 0;
 const constants_1 = require("./constants");
+const helpMessageBody = 'Say <emphasis>culture</emphasis> or <emphasis>principals</emphasis> to learn about our culture.  Say <emphasis>employees</emphasis> to learn how many people currentle work here.  What would you like to do?';
 exports.strings = {
     [constants_1.LocaleTypes.enUS]: {
         translation: {
@@ -18,7 +19,9 @@ exports.strings = {
             PRINCIPALS_THIRD: 'The third principal is to encourage open dialog.  At Fearless, we are not afraid to have hard conversations, or answer hard questions.  We encourage our team members and customers to have these conversations because we believe better things will come out of them.  We assume good intentions, and believe everyone is trying to better themselves and the company.  Do you want to hear the fourth principal?',
             PRINCIPALS_THIRD_REPROMPT: 'Do you want to hear the fourth principal?',
             PRINCIPALS_FOURTH: 'The fourth principal is to take initiative.  At Fearless, people are not limited by their job title.  We believe anyone is capable to take the lead on a task that can create change.  We encourage team members to explore new ideas and opportinities, even if it is outside of their comfort zone.',
-            UNKNOWN_QUESTION: 'Sorry, I am not sure what you are referring to'
+            UNKNOWN_QUESTION: 'Sorry, I am not sure what you are referring to',
+            HELP: `Let me help you learn more about Fearless.  ${helpMessageBody}`,
+            HELP_REPROMPT: helpMessageBody
         }
     }
 };
