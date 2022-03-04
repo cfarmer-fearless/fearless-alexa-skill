@@ -54,11 +54,12 @@ export const strings = {
     translation: {
       WELCOME:
         "¡Bienvenidos a Fearless! Donde hacemos software con alma. Puedo contarte muchas cosas para darte una idea de la empresa y de lo que hacemos. Puede decir <emphasis>cultura</emphasis> para escuchar más sobre nuestras creencias culturales. Si estás perdido, solo di <emphasis>ayuda</emphasis>. Que te gustaría hacer?",
-      EMPLOYEE_COUNT: "Fearless currently has {{count}} team members.",
-      PET_COUNT: "There are {{count}} {{pet}} owners at Fearless Baltimore.",
+      EMPLOYEE_COUNT:
+        "Fearless actualmente tiene {{count}} miembros del equipo.",
+      PET_COUNT: "Hay {{count}} {{pet}} propietarios en Fearless.",
       PET_COUNT_UNKNOWN_PET:
-        "I am not sure how many {{pet}} owners are at Fearless Baltimore.",
-      PET_COUNT_UNKNOWN_PET_REPROMPT: "What kind of pet?",
+        "No estoy seguro de cuántos {{pet}} propietarios hay en Fearless.",
+      PET_COUNT_UNKNOWN_PET_REPROMPT: "¿Qué tipo de mascota?",
       PRINCIPALS_INTRO:
         "At the foundation of Fearless culture are four principals.  First, create belonging.  Second, make an impact.  Third, encourage open dialog.  And fourth, take initiative.  Say first principal, second principal, third principal, or fourth principal to hear more about them.  Would you like to hear the first principal?",
       PRINCIPALS_FIRST:

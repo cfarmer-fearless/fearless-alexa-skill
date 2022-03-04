@@ -7,7 +7,6 @@ var RequestTypes;
     RequestTypes["Intent"] = "IntentRequest";
     RequestTypes["SessionEnd"] = "SessionEndedRequest";
 })(RequestTypes = exports.RequestTypes || (exports.RequestTypes = {}));
-;
 var IntentTypes;
 (function (IntentTypes) {
     // Built-in
@@ -40,10 +39,9 @@ var STRING_KEYS;
     STRING_KEYS["HELP"] = "HELP";
     STRING_KEYS["HELP_REPROMPT"] = "HELP_REPROMPT";
 })(STRING_KEYS = exports.STRING_KEYS || (exports.STRING_KEYS = {}));
-;
 var LocaleTypes;
 (function (LocaleTypes) {
     LocaleTypes["enUS"] = "en-US";
+    LocaleTypes["esES"] = "es-ES";
 })(LocaleTypes = exports.LocaleTypes || (exports.LocaleTypes = {}));
-;
 //# sourceMappingURL=constants.js.map

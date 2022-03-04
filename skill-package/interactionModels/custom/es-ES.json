@@ -51,8 +51,8 @@
                   ],
                   "samples": [
                       "{animal}",
-                      "number of pet owners",
-                      "number of {animal} pet owners"
+                      "número de dueños de mascotas",
+                      "número de dueños de mascotas de {animal}"
                   ]
               },
               {
@@ -81,19 +81,19 @@
                       {
                           "id": "DOG",
                           "name": {
-                              "value": "dog"
+                              "value": "perra"
                           }
                       },
                       {
                           "id": "CAT",
                           "name": {
-                              "value": "cat"
+                              "value": "gato"
                           }
                       },
                       {
                           "id": "BIRD",
                           "name": {
-                              "value": "bird"
+                              "value": "pájaro"
                           }
                       }
                   ]
